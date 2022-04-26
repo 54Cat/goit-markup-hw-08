@@ -1,0 +1,144 @@
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+
+  transform: translateX(100%);
+  visibility: hidden;
+  pointer-events: none;
+  transition-property: transform;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--time-fun);
+  
+  background-color: var(--primary-bg);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+
+  &.is-open {
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: initial;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-bg);
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu-group {
+  margin-top: auto;
+}
+
+
+  //----- Навигация -------
+
+.mobile-nav__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--primary-txt);
+  
+  transition-property: color;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--time-fun);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-txt);
+  }
+}
+
+.mobile-nav__item {
+  margin-bottom: 32px;
+}
+
+.mobile-current {
+  color: var(--accent-txt);
+}
+
+  //----- Контакты -------
+
+.mobile-contacts__list {
+  margin-bottom: 64px;
+}
+
+.mobile-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-contacts__link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: var(--secondary-txt);
+  transition-property: color;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--time-fun);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-txt);
+  }
+
+  &.phone {
+    color: var(--accent-txt);
+
+    @media screen and (min-width: 480px) { 
+      font-size: 34px;
+      line-height: 1.17;
+    }
+  }
+}
+
+
+  //----- Соцсети -------
+
+.mobile-social__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -10px;
+  margin-right: -10px;
+}
+
+.mobile-social__item {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.mobile-social__item:last-child .mobile-social__link {
+  padding: 0;
+  border: none;
+}
+
+.mobile-social__link {
+  display: block;
+  padding-right: 10px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-txt);
+
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}

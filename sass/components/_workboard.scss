@@ -1,0 +1,41 @@
+.section.workboard {
+  padding-top: 0;
+}
+
+.workboard-list {
+  display: flex;
+}
+
+.workboard-item {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.workboard-cont {
+  position: relative;
+}
+
+.workboard-descrtp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: var(--light-txt);
+  background-color: var(--secondary-bg);
+  opacity: 0.8;
+
+  font-family: var(--primary-font);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+}

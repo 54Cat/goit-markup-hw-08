@@ -1,0 +1,55 @@
+.menu-btn{
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: transparent;
+    border: none;
+    outline: transparent;
+    cursor: pointer;
+    padding: 0;
+    
+    z-index: 99;
+
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+  
+    &:hover .menu-btn__icon-open,
+    &:focus .menu-btn__icon-open {
+        fill: var(--accent-txt);
+    }
+
+    &:hover .menu-btn__icon-close,
+    &:focus .menu-btn__icon-close {
+        fill: var(--accent-txt);
+    }
+
+    &__icon-open{
+        opacity: 1;
+        fill: var(--primary-txt);
+    }
+
+
+    &__icon-close{
+        opacity: 0;
+        fill: var(--primary-txt);
+    }
+}
+
+
+    .menu-btn.is-active .menu-btn__icon-open {
+        opacity: 0;
+    }
+
+    .menu-btn.is-active .menu-btn__icon-close {
+        opacity: 1;
+    }

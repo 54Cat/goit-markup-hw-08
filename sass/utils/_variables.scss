@@ -1,0 +1,36 @@
+:root {
+  /*шрифты*/
+  --primary-font: 'Roboto', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+
+  /*цвета текста*/
+  --primary-txt: #212121;
+  --secondary-txt: #757575;
+  --light-txt: #ffffff;
+  --accent-txt: #2196f3;
+  --logo-txt: #000000;
+
+  /*цвета фона*/
+  --primary-bg: #ffffff;
+  --secondary-bg: #2f303a;
+  --third-bg: #f5f4fa;
+
+  /*цвета кнопок*/
+  --main-btn-bg: #2196f3;
+  --hover-main-btn-bg: #188ce8;
+  --filter-btn-bg: #f5f4fa;
+  --hover-filter-btn-bg: #2196f3;
+
+  /*цвета рамок*/
+  --primary-border: #eeeeee;
+  --header-border: #ececec;
+
+  /*цвета иконок*/
+  --primary-icon: #afb1b8;
+  --accent-icon: #ffffff;
+  --hover-icon-bg: #2196f3;
+
+  /**/
+  --time-duration: 250ms;
+  --time-fun: cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,48 @@
+.checkbox-label-modal {
+  white-space: nowrap;
+  display: block;
+  margin: 0 0 30px 31px;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox {
+  --webkit-appearance: none;
+  --moz-appeance: none;
+  appearance: none;
+}
+
+.checkbox-icon {
+  position: absolute;
+  left: -14px;
+  bottom: -2px;
+  transform: translate(-50%, -50%);
+
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  background-color: var(--primary-bg);
+  background-image: url(../images/checkbox.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox:checked + .checkbox-icon {
+  background-color: var(--hover-icon-bg);
+  background-image: url(../images/check-submit.svg);
+}
+
+.checkbox-text-modal {
+  font-family: var(--primary-font);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondary-txt);
+}
+
+.checkbox-link {
+  color: var(--accent-txt);
+  display: inline;
+  text-decoration: underline;
+}

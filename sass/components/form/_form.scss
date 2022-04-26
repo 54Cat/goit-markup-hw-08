@@ -1,0 +1,119 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition-property: opacity, visibility;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--time-fun);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background: var(--primary-bg);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px;
+}
+
+/*----------exit btn------------*/
+.exit-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background: var(--primary-bg);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition-property: fill;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--time-fun);
+
+  &:hover .exit-btn-icon,
+  &:focus .exit-btn-icon {
+    fill: var(--hover-icon-bg);
+  }
+}
+
+.exit-btn-icon {
+  height: 18px;
+  width: 18px;
+}
+
+.text-modal {
+  font-family: var(--primary-font);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-txt);
+  margin-bottom: 12px;
+}
+
+.form-label-modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &:focus-within > .icon-mod {
+    fill: var(--hover-icon-bg);
+  }
+
+  &:focus-within > .form-input-modal {
+    border: 1px solid var(--main-btn-bg);
+  }
+}
+
+.label-text-modal {
+  font-family: var(--primary-font);
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--secondary-txt);
+  margin-bottom: 4px;
+}
+
+.icon-mod {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 18px;
+  left: 21px;
+
+  transition-property: fill;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--time-fun);
+}
+
+.form-input-modal {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding-left: 42px;
+  transition-property: border-color;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--time-fun);
+}
