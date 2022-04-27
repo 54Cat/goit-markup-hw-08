@@ -8,6 +8,8 @@
   transition-property: opacity, visibility;
   transition-duration: var(--time-duration);
   transition-timing-function: var(--time-fun);
+
+  z-index: 101;
 }
 
 .backdrop.is-hidden {
@@ -21,13 +23,34 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  width: 90vw;
+  height: 100vh;
   background: var(--primary-bg);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
+
+  @media screen and (min-width: 480px) { 
+    width: 450px;
+    height: 609px;
+  }
+
+  @media screen and (min-width: 1200px) { 
+    width: 528px;
+    height: 581px;
+  }
+}
+
+  .modal__text {
+  font-family: var(--primary-font);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-txt);
+  margin-bottom: 12px;
 }
 
 /*----------exit btn------------*/
@@ -49,32 +72,31 @@
   transition-duration: var(--time-duration);
   transition-timing-function: var(--time-fun);
 
-  &:hover .exit-btn-icon,
-  &:focus .exit-btn-icon {
+  &:hover .exit-btn__icon,
+  &:focus .exit-btn__icon {
     fill: var(--hover-icon-bg);
   }
 }
 
-.exit-btn-icon {
+.exit-btn__icon {
   height: 18px;
   width: 18px;
 }
 
-.text-modal {
-  font-family: var(--primary-font);
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--primary-txt);
-  margin-bottom: 12px;
-}
+/*----------form labels------------*/
+// .modal-form {
+  
+//   }
 
-.form-label-modal {
+.modal-form__label {
   position: relative;
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
+
+  &.modal-form__label--comments {
+    margin-bottom: 20px;
+  }
 
   &:focus-within > .icon-mod {
     fill: var(--hover-icon-bg);
@@ -85,7 +107,7 @@
   }
 }
 
-.label-text-modal {
+.modal-form__text {
   font-family: var(--primary-font);
   font-size: 12px;
   line-height: 1.16;
@@ -97,7 +119,7 @@
 .icon-mod {
   position: absolute;
   transform: translate(-50%, -50%);
-  bottom: 18px;
+  bottom: 8px;
   left: 21px;
 
   transition-property: fill;
@@ -105,13 +127,11 @@
   transition-timing-function: var(--time-fun);
 }
 
-.form-input-modal {
-  width: 448px;
+.modal-form__input {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-  margin-bottom: 10px;
   padding-left: 42px;
   transition-property: border-color;
   transition-duration: var(--time-duration);

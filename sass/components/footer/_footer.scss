@@ -1,0 +1,128 @@
+@import "./footer-social";
+@import "./footer-form";
+  
+.footer {
+  background-color: var(--secondary-bg);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  @media screen and (min-width: 768px) { 
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) { 
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
+
+.footer__address {
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) { 
+    margin-right: 165px;
+  }
+
+  @media screen and (min-width: 1200px) { 
+    margin-bottom: 0;
+    margin-right: 70px;
+  }
+}
+
+.logo-link__footer {
+  display: flex;
+  justify-content: center;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: var(--light-txt);
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) { 
+    justify-content: flex-start;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
+
+.address {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    align-items: flex-start;
+  }
+}
+
+.address__text {
+  margin-bottom: 9px;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--light-txt);
+}
+
+.address__mail,
+.address__tel {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: var(--light-txt);
+  opacity: 0.6;
+
+  transition-property: color;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--time-fun);
+}
+
+.address__mail:hover,
+.address__tel:hover,
+.address__mail:focus,
+.address__tel:focus {
+  color: var(--accent-txt);
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer__socials {
+  margin-bottom: 60px;
+  
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    margin-right: 93px;
+  }
+}
+
+.footer__subscribe {
+  font-family: var(--primary-font);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--light-txt);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (min-width: 1200px) {
+    justify-content: flex-start;
+  }
+}
