@@ -1,12 +1,17 @@
 .section.workboard {
+
+  @media screen and (max-width: 1199px) { 
+    display: none;
+  }
+  
   padding-top: 0;
 }
 
-.workboard-list {
+.workboard__list {
   display: flex;
 }
 
-.workboard-item {
+.workboard__item {
   margin-right: 30px;
 
   &:last-child {
@@ -14,11 +19,11 @@
   }
 }
 
-.workboard-cont {
+.workboard__thumb {
   position: relative;
 }
 
-.workboard-descrtp {
+.workboard__descrtp {
   display: flex;
   align-items: center;
   justify-content: center;
