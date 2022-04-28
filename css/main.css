@@ -1425,18 +1425,53 @@ textarea {
   }
 }
 
-.filter-list {
+.filter__list {
   display: flex;
   align-items: center;
   margin-bottom: 50px;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
-.filter-item:not(:last-child) {
+@media screen and (min-width: 768px) {
+  .filter__list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+}
+
+.filter__item {
   margin-right: 8px;
 }
 
-.filter-btn {
+@media screen and (max-width: 767px) {
+  .filter__item {
+    margin-bottom: 15px;
+  }
+  .filter__item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 767px) {
+  .filter__item:nth-child(n+4) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter__item {
+    margin-bottom: 0;
+  }
+}
+
+.filter__item:last-child {
+  margin-right: 0;
+}
+
+.filter__btn {
   padding: 6px 22px;
   border-radius: 4px;
   border: 0;
@@ -1453,7 +1488,7 @@ textarea {
   transition-timing-function: var(--time-fun);
 }
 
-.filter-btn:hover, .filter-btn:focus {
+.filter__btn:hover, .filter__btn:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   background-color: var(--hover-filter-btn-bg);
   color: var(--light-txt);
@@ -1468,48 +1503,95 @@ textarea {
   margin-bottom: 0;
 }
 
-.works-list {
+.works__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.works-item-container {
-  padding: 20px 24px;
-  border-right: 1px solid var(--primary-border);
-  border-bottom: 1px solid var(--primary-border);
-  border-left: 1px solid var(--primary-border);
+@media screen and (min-width: 480px) {
+  .works__list {
+    justify-content: flex-start;
+  }
 }
 
-.works-item {
-  margin-right: 30px;
+.works__item {
   margin-bottom: 30px;
 }
 
-.works-item:nth-child(3n) {
-  margin-right: 0;
-}
-
-.works-item:nth-child(n + 6) {
+.works__item:last-child {
   margin-bottom: 0;
 }
 
-.works-link {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .works__item {
+    margin-right: 30px;
+  }
+  .works__item:nth-child(2n) {
+    margin-right: 0;
+  }
+  .works__item:nth-child(n + 8) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .works__item {
+    margin-right: 30px;
+  }
+  .works__item:nth-child(3n) {
+    margin-right: 0;
+  }
+  .works__item:nth-child(n + 6) {
+    margin-bottom: 0;
+  }
+}
+
+.works__link {
   display: block;
   transition-property: box-shadow;
   transition-duration: var(--time-duration);
   transition-timing-function: var(--time-fun);
 }
 
-.works-link:hover, .works-link:focus {
+.works__link:hover, .works__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.works-thumb {
+.works__thumb {
   position: relative;
   overflow: hidden;
 }
 
-.works-descr {
+.works__img {
+  height: 294px;
+}
+
+@media screen and (max-width: 479px) {
+  .works__img {
+    max-width: 290px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .works__img {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .works__img {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .works__img {
+    width: 370px;
+  }
+}
+
+.works__descr {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1532,12 +1614,38 @@ textarea {
   transition-timing-function: var(--time-fun);
 }
 
-.works-link:hover .works-descr,
-.works-link:focus .works-descr {
+.works__link:hover .works__descr,
+.works__link:focus .works__descr {
   transform: translateY(0);
 }
 
-.works-name {
+.works__container {
+  display: block;
+  padding: 20px 24px;
+  border-right: 1px solid var(--primary-border);
+  border-bottom: 1px solid var(--primary-border);
+  border-left: 1px solid var(--primary-border);
+}
+
+@media screen and (max-width: 479px) {
+  .works__container {
+    max-width: 290px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .works__container {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .works__item:nth-child(-n+2) .works__container {
+    height: 146px;
+  }
+}
+
+.works__name {
   margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
@@ -1546,7 +1654,7 @@ textarea {
   color: var(--primary-txt);
 }
 
-.works-type {
+.works__type {
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.03em;

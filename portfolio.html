@@ -20,9 +20,16 @@
 
         <header class="header">
             <div class="container header__container">
-                <a class="header__link link" href="./index.html">
-                    <span class="header__logo">Web</span>Studio
+                <a class="logo-link__header link" href="./index.html">
+                    <span class="logo-link__accent">Web</span>Studio
                 </a>
+                <button class="menu-btn" type="button" aria-label="Кнопка открытия меню" aria-expanded="false" data-menu-button>
+                    <svg class="menu-btn__icon" width="40" height="40">
+                        <use class="menu-btn__icon-open" href="./images/icons.svg#open-menu-icon_40px"></use>
+                        <use class="menu-btn__icon-close" href="./images/icons.svg#close-menu-icon_40px"></use>
+                    </svg>
+                </button>
+        
                 <nav class="header-nav">
                     <ul class="header-nav__list list">
                         <li class="header-nav__item">
@@ -59,149 +66,141 @@
 
         <main>
             <!-- секция Портфолио -->
-            <section class="section portfolio">
-                <div class="container portfolio-container">
+            <section class="portfolio section">
+                <div class="portfolio__container container">
                     <h2 class="title visually-hidden">Портфолио</h2>
-                    <ul class="filter-list list">
-                        <li class="filter-item"> 
-                            <button class="filter-btn current-filter" type="button">Все</button> 
+
+                    <ul class="filter__list list">
+                        <li class="filter__item"> 
+                            <button class="filter__btn current-filter" type="button">Все</button> 
                         </li>
-                        <li class="filter-item">
-                            <button class="filter-btn" type="button">Веб-сайты</button>
+                        <li class="filter__item">
+                            <button class="filter__btn" type="button">Веб-сайты</button>
                         </li>
-                        <li class="filter-item">
-                            <button class="filter-btn" type="button">Приложения</button>
+                        <li class="filter__item">
+                            <button class="filter__btn" type="button">Приложения</button>
                         </li>
-                        <li class="filter-item">
-                            <button class="filter-btn" type="button">Дизайн</button>
+                        <li class="filter__item">
+                            <button class="filter__btn" type="button">Дизайн</button>
                         </li>
-                        <li class="filter-item">
-                            <button class="filter-btn" type="button">Маркетинг</button>
+                        <li class="filter__item">
+                            <button class="filter__btn" type="button">Маркетинг</button>
                         </li>
                     </ul>
                                     
-                    <ul class="works-list list">
-                        <li class="works-item">
-                            <a class="works-link link" href="">
-                                <div class="works-thumb">
-                                    <img class="works-img" src="./images/opened-laptop.jpg" 
-                                    alt="Открытый ноутбук" 
-                                    width="370" height="294">
-                                    <p class="works-descr">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
+                    <ul class="works__list list">
+                        <li class="works__item">
+                            <a class="works__link link" href="">
+                                <div class="works__thumb">
+                                    <img class="works__img" src="./images/opened-laptop.jpg" 
+                                    alt="Открытый ноутбук">
+                                    <p class="works__descr">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                                 </div>
-                                <div class="works-item-container">                                    <h3 class="works-name">Технокряк</h3>
-                                    <p class="works-type">Веб-сайт</p>
+                                <div class="works__container">                                    <h3 class="works__name">Технокряк</h3>
+                                    <p class="works__type">Веб-сайт</p>
                                </div> 
                             </a>
                         </li>
-                        <li class="works-item">
-                            <a class="works-link link" href="">
-                                <div class="works-thumb">
-                                   <img class="works-img" src="./images/basketball-players.jpg" 
-                                alt="Постер баскетбольной игры" 
-                                width="370" height="294">
-                                    <p class="works-descr">New Orlean vs Golden Star</p>
+                        <li class="works__item">
+                            <a class="works__link link" href="">
+                                <div class="works__thumb">
+                                   <img class="works__img" src="./images/basketball-players.jpg" 
+                                alt="Постер баскетбольной игры">
+                                    <p class="works__descr">New Orlean vs Golden Star</p>
                                 </div>
-                                <div class="works-item-container">
-                                    <h3 class="works-name">Постер New Orlean vs Golden Star</h3>
-                                    <p class="works-type">Дизайн</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="works-item">
-                            <a class="works-link link" href="">
-                                <div class="works-thumb">
-                                    <img class="works-img" src="./images/logo-seafood.jpg" 
-                                    alt="Логотип ресторана Seafood" 
-                                    width="370" height="294">
-                                    <p class="works-descr">Seafood</p>
-                                </div>
-                                <div class="works-item-container">
-                                    <h3 class="works-name">Ресторан Seafood</h3>
-                                    <p class="works-type">Приложение</p>
+                                <div class="works__container">
+                                    <h3 class="works__name">Постер New Orlean vs Golden Star</h3>
+                                    <p class="works__type">Дизайн</p>
                                 </div>
                             </a>
                         </li>
-                        <li class="works-item">
-                            <a class="works-link link" href="">
-                                <div class="works-thumb">
-                                    <img class="works-img" src="./images/headphones.jpg" 
-                                    alt="Наушники" 
-                                    width="370" height="294">
-                                    <p class="works-descr">Prime</p>
+                        <li class="works__item">
+                            <a class="works__link link" href="">
+                                <div class="works__thumb">
+                                    <img class="works__img" src="./images/logo-seafood.jpg" 
+                                    alt="Логотип ресторана Seafood">
+                                    <p class="works__descr">Seafood</p>
                                 </div>
-                                <div class="works-item-container">
-                                    <h3 class="works-name">Проект Prime</h3>
-                                    <p class="works-type">Маркетинг</p>
+                                <div class="works__container">
+                                    <h3 class="works__name">Ресторан Seafood</h3>
+                                    <p class="works__type">Приложение</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="works__item">
+                            <a class="works__link link" href="">
+                                <div class="works__thumb">
+                                    <img class="works__img" src="./images/headphones.jpg" 
+                                    alt="Наушники">
+                                    <p class="works__descr">Prime</p>
+                                </div>
+                                <div class="works__container">
+                                    <h3 class="works__name">Проект Prime</h3>
+                                    <p class="works__type">Маркетинг</p>
                                 </div>                                
                             </a>
                         </li>
-                        <li class="works-item">
-                            <a class="works-link link" href="">
-                                <div class="works-thumb">
-                                    <img class="works-img" src="./images/boxes.jpg" 
-                                    alt="Две коробки" 
-                                    width="370" height="294">
-                                    <p class="works-descr">Boxes</p>
+                        <li class="works__item">
+                            <a class="works__link link" href="">
+                                <div class="works__thumb">
+                                    <img class="works__img" src="./images/boxes.jpg" 
+                                    alt="Две коробки">
+                                    <p class="works__descr">Boxes</p>
                                 </div>
-                                <div class="works-item-container">
-                                    <h3 class="works-name">Проект Boxes</h3>
-                                    <p class="works-type">Приложение</p>
+                                <div class="works__container">
+                                    <h3 class="works__name">Проект Boxes</h3>
+                                    <p class="works__type">Приложение</p>
                                 </div>
                             </a>
                         </li>
-                        <li class="works-item">
-                            <a class="works-link link" href="">
-                                <div class="works-thumb">
-                                    <img class="works-img" src="./images/monitor.jpg" 
-                                    alt="Монитор" 
-                                    width="370" height="294">
-                                    <p class="works-descr">Inspiration has no Borders</p>
+                        <li class="works__item">
+                            <a class="works__link link" href="">
+                                <div class="works__thumb">
+                                    <img class="works__img" src="./images/monitor.jpg" 
+                                    alt="Монитор">
+                                    <p class="works__descr">Inspiration has no Borders</p>
                                 </div>
-                                <div class="works-item-container">
-                                    <h3 class="works-name">Inspiration has no Borders</h3>
-                                    <p class="works-type">Веб-сайт</p>
+                                <div class="works__container">
+                                    <h3 class="works__name">Inspiration has no Borders</h3>
+                                    <p class="works__type">Веб-сайт</p>
                                 </div>                      
                             </a>
                         </li>
-                        <li class="works-item">
-                            <a class="works-link link" href="">
-                                <div class="works-thumb">
-                                    <img class="works-img" src="./images/opened-book.jpg" 
-                                    alt="Открытая книга" 
-                                    width="370" height="294">
-                                    <p class="works-descr">Limited Edition</p>
+                        <li class="works__item">
+                            <a class="works__link link" href="">
+                                <div class="works__thumb">
+                                    <img class="works__img" src="./images/opened-book.jpg" 
+                                    alt="Открытая книга">
+                                    <p class="works__descr">Limited Edition</p>
                                 </div>
-                                <div class="works-item-container">
-                                    <h3 class="works-name">Издание Limited Edition</h3>
-                                    <p class="works-type">Дизайн</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="works-item">
-                            <a class="works-link link" href="">
-                                <div class="works-thumb">
-                                    <img class="works-img" src="./images/label.jpg" 
-                                    alt="Этикетка" 
-                                    width="370" height="294">
-                                    <p class="works-descr">LAB</p>
-                                </div>
-                                <div class="works-item-container"><h3 class="works-name">Проект LAB</h3>
-                                    <p class="works-type">Маркетинг</p>
+                                <div class="works__container">
+                                    <h3 class="works__name">Издание Limited Edition</h3>
+                                    <p class="works__type">Дизайн</p>
                                 </div>
                             </a>
                         </li>
-                        <li class="works-item">
-                            <a class="works-link link" href="">
-                                <div class="works-thumb">
-                                    <img class="works-img" src="./images/work-on-laptop.jpg" 
-                                    alt="Работа за ноутбуком" 
-                                    width="370" height="294">
-                                    <p class="works-descr">Growing Business</p>
+                        <li class="works__item">
+                            <a class="works__link link" href="">
+                                <div class="works__thumb">
+                                    <img class="works__img" src="./images/label.jpg" 
+                                    alt="Этикетка">
+                                    <p class="works__descr">LAB</p>
                                 </div>
-                                <div class="works-item-container">
-                                    <h3 class="works-name">Growing Business</h3>
-                                    <p class="works-type">Приложение</p>
+                                <div class="works__container"><h3 class="works__name">Проект LAB</h3>
+                                    <p class="works__type">Маркетинг</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="works__item">
+                            <a class="works__link link" href="">
+                                <div class="works__thumb">
+                                    <img class="works__img" src="./images/work-on-laptop.jpg" 
+                                    alt="Работа за ноутбуком">
+                                    <p class="works__descr">Growing Business</p>
+                                </div>
+                                <div class="works__container">
+                                    <h3 class="works__name">Growing Business</h3>
+                                    <p class="works__type">Приложение</p>
                                 </div>
                             </a>
                         </li>
@@ -211,62 +210,63 @@
         </main>
 
         <footer class="footer">
-            <div class="container footer-container">
-                <div class="footer-address">
-                    <a class="footer-link link" href="./index.html">
-                        <span class="header__logo">Web</span>Studio
+            <div class="footer__container container">
+                <div class="footer__address">
+                    <a class="logo-link__footer link" href="./index.html">
+                        <span class="logo-link__accent">Web</span>Studio
                     </a>
-                    <address class="contacts">
-                        <p class="address">г. Киев, пр-т Леси Украинки, 26</p>
-                        <ul class="footer-contacts-list list">
-                            <li class="footer-contacts-item">
-                                <a class="footer-mail link" href="mailto:info@example.com">info@example.com</a>
+                    <address class="address">
+                        <p class="address__text">г. Киев, пр-т Леси Украинки, 26</p>
+                        <ul class="address__list list">
+                            <li class="address__item">
+                                <a class="address__mail link" href="mailto:info@example.com">info@example.com</a>
                             </li>
-                            <li class="footer-contacts-item">
-                                <a class="footer-tel link" href="tel:+380991111111"> +38 099 111 11 11</a>
+                            <li class="address__item">
+                                <a class="address__tel link" href="tel:+380991111111"> +38 099 111 11 11</a>
                             </li>
                         </ul>
                     </address>
                 </div>
-                <div class="footer-socials">
-                    <p class="footer-social-follow">присоединяйтесь</p>
-                    <ul class="footer-social-list list">
-                        <li class="social-item">
-                            <a href="" class="footer-social-link link">
-                                <svg class="footer-social-icon">
+                <div class="footer__socials">
+                    <p class="footer__subscribe">присоединяйтесь</p>
+                    <ul class="footer-social__list list">
+                        <li class="social__item">
+                            <a href="" class="footer-social__link link">
+                                <svg class="footer-social__icon">
                                     <use href="./images/icons.svg#instagram"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="social-item">
-                            <a href="" class="footer-social-link link">
-                                <svg class="footer-social-icon">
+                        <li class="social__item">
+                            <a href="" class="footer-social__link link">
+                                <svg class="footer-social__icon">
                                     <use href="./images/icons.svg#twitter"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="social-item">
-                            <a href="" class="footer-social-link link">
-                                <svg class="footer-social-icon">
+                        <li class="social__item">
+                            <a href="" class="footer-social__link link">
+                                <svg class="footer-social__icon">
                                     <use href="./images/icons.svg#facebook"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="social-item">
-                            <a href="" class="footer-social-link link">
-                                <svg class="footer-social-icon">
+                        <li class="social__item">
+                            <a href="" class="footer-social__link link">
+                                <svg class="footer-social__icon">
                                     <use href="./images/icons.svg#linkedin"></use>
                                 </svg>
                             </a>
                         </li>
                     </ul>
                 </div>
+        
                 <form class="form">
-                    <label class="form-label">
-                        <span class="label-text">Подпишитесь на рассылку</span>
-                        <input type="email" class="form-input" name="mail" placeholder="E-mail" required>
+                    <label class="form__label">
+                        <span class="form__title">Подпишитесь на рассылку</span>
+                        <input class="form__input" type="email" name="mail" placeholder="E-mail" required>
                     </label>
-            
+        
                     <button class="submit-btn" type="submit">Подписаться
                         <span>
                             <svg class="send-icon" width="24" height="24">
@@ -277,6 +277,55 @@
                 </form>
             </div>
         </footer>
+
+        <div class="mobile-overlay" data-menu>
+            <div class="mobile-menu">
+                <nav class="mobile-nav">
+                    <ul class="mobile-nav__list list">
+                        <li class="mobile-nav__item">
+                            <a class="mobile-nav__link link" href="./index.html">Студия</a>
+                        </li>
+                        <li class="mobile-nav__item">
+                            <a class="mobile-nav__link link mobile-current" href="./portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="mobile-nav__item">
+                            <a class="mobile-nav__link link" href="">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-group">
+                    <ul class="mobile-contacts__list list">
+        
+                        <li class="mobile-contacts__item">
+                            <a class="mobile-contacts__link link phone" href="tel:+380961111111">
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                        <li class="mobile-contacts__item">
+                            <a class="mobile-contacts__link link mail" href="mailto:info@devstudio.com">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-social__list list">
+                        <li class="mobile-social__item">
+                            <a href="" class="mobile-social__link link">Instagram</a>
+                        </li>
+                        <li class="mobile-social__item">
+                            <a href="" class="mobile-social__link link">Twitter</a>
+                        </li>
+                        <li class="mobile-social__item">
+                            <a href="" class="mobile-social__link link">Facebook</a>
+                        </li>
+                        <li class="mobile-social__item">
+                            <a href="" class="mobile-social__link link">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <script src="./js/menu.js"></script>
         
     </body>
 </html>
