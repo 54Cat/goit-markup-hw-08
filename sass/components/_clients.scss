@@ -1,38 +1,69 @@
-.clients__container {
-  
-}
-  
 .clients__list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 
-
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 480px) {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    margin-top: -30px;
-    margin-right: -30px;
+    justify-content: center;    
+    flex-wrap: wrap;
   }
-
 }
 
 .clients__item {
-  flex-basis: calc(100% / 6 - 30px);
-  margin-top: 30px;
-  margin-right: 30px;
-  display: flex;
-  width: 170px;
+  width: 210px;
   height: 92px;
+  margin-bottom: 30px;
+
   border: 1px solid var(--primary-icon);
   box-sizing: border-box;
   border-radius: 4px;
   cursor: pointer;
-  justify-content: center;
-  align-items: center;
-
+  
   transition-property: border-color;
   transition-duration: var(--time-duration);
   transition-timing-function: var(--time-fun);
+ 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    margin-right: 30px;
+    
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(n+5) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 226px;
+    margin-right: 30px;
+    
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(n+4) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+    margin-right: 30px;
+    margin-bottom: 0;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 
   &:hover,
   &:focus {
@@ -62,4 +93,6 @@
 
 .clients__icon {
   color: currentColor;
+  width: 106px; 
+  height: 60px;
 }
