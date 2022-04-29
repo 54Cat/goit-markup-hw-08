@@ -782,7 +782,7 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .hero-img {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/bg-hero_s.png);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/bg-hero_s.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -791,13 +791,13 @@ textarea {
 
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (max-width: 767px) and (min-resolution: 192dpi) and (max-width: 767px), screen and (max-width: 767px) and (min-resolution: 2dppx) and (max-width: 767px) {
   .hero-img {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/bg-hero_s@2x.png);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/bg-hero_s@2x.jpg);
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero-img {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/bg-hero_m.png);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/bg-hero_m.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -806,19 +806,19 @@ textarea {
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-width: 768px) and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-width: 768px) and (min-resolution: 2dppx) and (min-width: 768px) {
   .hero-img {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/bg-hero_m@2x.png);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/bg-hero_m@2x.jpg);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero-img {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/bg-hero_l.png);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/bg-hero_l.jpg);
   }
 }
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-width: 1200px) and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-width: 1200px) and (min-resolution: 2dppx) and (min-width: 1200px) {
   .hero-img {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/bg-hero_l@2x.png);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/bg-hero_l@2x.jpg);
   }
 }
 
@@ -1586,7 +1586,9 @@ textarea {
 }
 
 .works__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition-property: box-shadow;
   transition-duration: var(--time-duration);
   transition-timing-function: var(--time-fun);
@@ -1658,7 +1660,6 @@ textarea {
 }
 
 .works__container {
-  display: block;
   padding: 20px 24px;
   border-right: 1px solid var(--primary-border);
   border-bottom: 1px solid var(--primary-border);
@@ -1673,13 +1674,7 @@ textarea {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .works__container {
-    width: 354px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .works__item:nth-child(-n+2) .works__container {
-    height: 146px;
+    flex-grow: 1;
   }
 }
 
