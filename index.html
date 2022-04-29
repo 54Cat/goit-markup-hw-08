@@ -66,7 +66,7 @@
 
         <main>
             <!-- секция Заказать услугу -->
-            <section class="order">
+            <section class="order hero-img">
                 <div class="container">
                     <h1 class="main-title">Эффективные решения <br>для вашего бизнеса</h1>
                     <button data-modal-open class="main-btn" type="button">Заказать услугу</button>
@@ -129,21 +129,37 @@
                     <ul class="workboard__list list">
                         <li class="workboard__item">
                             <div class="workboard__thumb">
-                                <img class="workboard__img" src="./images/keyboard.jpg" alt="работа за клавиатурой" width="370" height="294">
+                                <picture>
+                                    <source srcset="
+                                                   ./images/workboard/keyboard_l.png 1x,
+                                                   ./images/workboard/keyboard_l@2x.png 2x
+                                                   " media="(min-width:1200px)" type="image/webp" />
+                                    <img class="workboard__img" src="./images/old/keyboard.jpg" alt="работа за клавиатурой" width="370" height="294">
+                                </picture>
                                 <p class="workboard__descrtp">Десктопные приложения</p>
                             </div>
                         </li>
                         <li class="workboard__item">
                             <div class="workboard__thumb">
-                                <img class="workboard__img" src="./images/laptop_phone.jpg" alt="работа с телефоном и с ноутбуком" width="370"
-                                height="294">
+                                <picture>
+                                    <source srcset="
+                                                    ./images/workboard/laptop-phone_l.png 1x,
+                                                    ./images/workboard/laptop-phone_l@2x.png 2x
+                                                    " media="(min-width:1200px)" type="image/webp" />
+                                    <img class="workboard__img" src="./images/old/laptop_phone.jpg" alt="работа с телефоном и с ноутбуком" width="370" height="294">
+                                </picture>
                                 <p class="workboard__descrtp">Мобильные приложения</p>
                             </div>
                         </li>
                         <li class="workboard__item">
                             <div class="workboard__thumb">
-                                <img class="workboard__img" src="./images/color_palette.jpg" alt="палитра цветов на планшете" width="370"
-                                height="294">
+                                <picture>
+                                    <source srcset="
+                                                    ./images/workboard/color-palette_l.png 1x,
+                                                    ./images/workboard/color-palette_l@2x.png 2x
+                                                    " media="(min-width:1200px)" type="image/webp" />
+                                    <img class="workboard__img" src="./images/old/color_palette.jpg" alt="палитра цветов на планшете" width="370" height="294">
+                                </picture>
                                 <p class="workboard__descrtp">Дизайнерские решения</p>
                             </div>
                         </li>
