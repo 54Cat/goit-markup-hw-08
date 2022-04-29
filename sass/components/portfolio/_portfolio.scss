@@ -66,7 +66,7 @@
 }
 
 .works__img {
-  height: 294px;
+  max-height: 294px;
 
   @media screen and (max-width: 479px) {
     max-width: 290px;

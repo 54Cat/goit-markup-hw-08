@@ -1602,7 +1602,7 @@ textarea {
 }
 
 .works__img {
-  height: 294px;
+  max-height: 294px;
 }
 
 @media screen and (max-width: 479px) {
